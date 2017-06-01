@@ -64,7 +64,7 @@
                   </span>
                 </div>
                 <br/><br/>
-                <h4>PUC Rio, Brasil - 2 June 2017</h4>
+                <h4>PUC Rio, Brasil - 2 June 2017<br/>Shell - Cambridge - PUC</h4>
               </section>
 
               <!-- University of Cambridge -->
@@ -345,6 +345,17 @@
 
 	    <!-- Underwater landslides -->
 	    <section>
+              <!-- Dissipation mechanism -->
+              <section>
+                <h2>Possible boundary conditions of submarine run‐out</h2>
+	        <img src="images/landslide.png" width="80%">
+		<ul>
+                  <li>Presence of ambient water (larger drag force & less gravity).</li>
+                  <li>Water entrainment.</li>
+                  <li>Pore pressure does not dissipate.</li>
+                </ul>
+              </section>
+
               <!-- Submarine landslide -->
               <section>
                 <h2>Submarine landslides</h2>
@@ -371,23 +382,7 @@
                 </ul>
               </section>
 
-
-              <!-- Dissipation mechanism -->
-              <section>
-                <h2>Possible boundary conditions of submarine run‐out</h2>
-	        <img src="images/landslide.png" width="80%">
-		<ul>
-                  <li>Presence of ambient water (larger drag force & less gravity).</li>
-                  <li>Water entrainment.</li>
-                  <li>Pore pressure does not dissipate.</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2>Mechanism of submarine runout</h2>
-	        <img src="images/water_entrainment.png" width="100%">
-              </section>
-              
+              <!-- MPM Water entrainment -->
               <section>
                 <h2>MPM submarine landslide: Water entrainment</h2>
                 <video  width="100%" autoplay controls loop>
@@ -397,7 +392,12 @@
                 <p>(Taka., 2012)</p>
               </section>
 
-
+              <!-- Mechanism of runout-->
+              <section>
+                <h2>Mechanism of submarine runout</h2>
+	        <img src="images/water_entrainment.png" width="100%">
+              </section>
+            
               <!-- LBM DEM a6 -->
               <section>
                 <h3>LBM - DEM simulation of granular collapse in fluid</h3>
@@ -822,34 +822,42 @@
               <section>
                 <h2>LEM: Tension test (uniform)</h2>
                 <div style="float: left; width: 50%;">
-                  <video  width="100%" controls loop>
+                  <video  id="lem_uniform" width="100%">
                     <source src="media/tension_uniform_disp.webm" type="video/webm">
                       Your browser does not support the video tag.
                   </video>
 	        </div>	
                 <div style="float: right; width: 50%;">
-                  <video  width="100%" controls loop>
+                  <video id="lem_uniform_crack" width="100%">
                     <source src="media/tension_uniform_crack.webm" type="video/webm">
                       Your browser does not support the video tag.
                   </video>
 	        </div>
+                <div class="media-buttons">
+                  <input type="button" id="play-button" onclick="PlayVideo('lem_uniform');PlayVideo('lem_uniform_crack')"; this.disable=true; pause-button.disable=false; value="Play" />
+                  <input type="button" id="pause-button" onclick="PauseVideo('lem_uniform');PauseVideo('lem_uniform_crack')"; this.disable=true; play-button.disable=false; value="Pause" />
+                </div>
               </section>
                             
               <!-- Tension test -->
               <section>
                 <h2>LEM: Tension test (Log-Normal 1.0)</h2>
                 <div style="float: left; width: 50%;">
-                  <video  width="100%" controls loop>
-                    <source src="media/tension_ln1.0_crack.webm" type="video/webm">
+                  <video id="lem_ln1"  width="100%">
+                    <source src="media/tension_ln1.0_disp.webm" type="video/webm">
                       Your browser does not support the video tag.
                   </video>
 	        </div>	
                 <div style="float: right; width: 50%;">
-                  <video  width="100%" controls loop>
-                    <source src="media/tension_ln1.0_disp.webm" type="video/webm">
+                  <video id="lem_ln1_crack" width="100%">
+                    <source src="media/tension_ln1.0_crack.webm" type="video/webm">
                       Your browser does not support the video tag.
                   </video>
 	        </div>
+                <div class="media-buttons">
+                  <input type="button" id="play-button" onclick="PlayVideo('lem_ln1');PlayVideo('lem_ln1_crack')"; this.disable=true; pause-button.disable=false; value="Play" />
+                  <input type="button" id="pause-button" onclick="PauseVideo('lem_ln1');PauseVideo('lem_ln1_crack')"; this.disable=true; play-button.disable=false; value="Pause" />
+                </div>
               </section>
 
                                           
@@ -859,11 +867,13 @@
                 <div style="float: left; width: 50%;">
                   <figure>
 	            <img src="images/tension_uniform_crack.png" style="width:100%">
+                    <figcaption>Uniform</figcaption>
 	          </figure>
 	        </div>	
                 <div style="float: right; width: 50%;">
                   <figure>
 	            <img src="images/tension_ln1.0_crack.png" style="width:100%">
+                    <figcaption>LogNormal 1.0</figcaption>
 	          </figure>
 	        </div>
               </section>
